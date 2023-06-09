@@ -51,6 +51,7 @@ function Todo(){
     function cancelEditHandler(){
         setEdit([]);
         setActivity('');
+        setMessage('');
     }
     function deleteTodoHandler(todoId){
         setTodos(todos.filter((todo)=>{return todo.id !== todoId;}))
@@ -58,7 +59,7 @@ function Todo(){
     }
     return (<>
         <h1>Simpe React Todo List</h1>
-        <p style={{  }}>{message}</p>
+        <p style={{ color:"red" }}>{message}</p>
         <form onSubmit={saveTodoHandler}>
             <input value={activity} type="text" onChange={(e)=>{setActivity(e.target.value)}}/>
             <button>{edit.id ? 'Simpan' : 'Tambah'}</button>
