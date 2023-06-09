@@ -36,6 +36,7 @@ function Todo(){
             done:false
         }]);
         setActivity('');
+        setMessage('');
     }
     function doneTodoHandler(todo){
         const updatedTodo = {
